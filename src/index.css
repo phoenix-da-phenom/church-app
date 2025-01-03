@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronicle';
+    src: url('./Assets/fonts/Chronicle.ttf') format('truetype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+}
+
+body {
+    @apply bg-foreground-main font-gilroy text-white;
+}
+
+.content {
+    @apply bg-background-main border-2 rounded-lg w-[100%] my-10;
+}
