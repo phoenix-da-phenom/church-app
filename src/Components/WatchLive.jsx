@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export default function WatchLive() {
   return (
-    <div>WatchLive</div>
-  )
+    <div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  );
 }
