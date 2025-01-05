@@ -99,7 +99,7 @@ export default function NavigationalBar() {
           </li>
           <li className="group hover:-translate-y-2 transition-transform duration-300">
             <a
-              href=""
+            
               className="text-lg font-semibold  hover:text-accent-main"
             >
               Gallery
