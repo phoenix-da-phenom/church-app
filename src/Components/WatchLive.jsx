@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WatchLive() {
   return (
-    <div className="container">
+    <div className="container relative">
       <h2 className="container text-2xl mb-2">Stay in touch online now!</h2>
       <div className=" flex  items-center justify-between "  >
         <div id="buttons" className=" flex mb-4 space-x-1 md:space-x-4 "> 
@@ -15,6 +15,10 @@ export default function WatchLive() {
             Watch Live {"(Streaming)"}
             </button>
         </div>
+          <div id="floatPlayIcon">
+            <img src="./Image/play-button.png" alt="image" className="w-12 h-12 absolute top-30 right-80 md:w-16 md:h-16" />
+            </div>
+
         <div id="image"className="w-1/2 ">
 
           <img src='./Image/archive/PHOTO-2022-11-20-12-38-28.jpg' alt='image' className="rounded-lg hidden md:block" />
