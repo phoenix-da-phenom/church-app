@@ -1,4 +1,7 @@
 import React from "react";
+import p1 from '../Image/PHOTO-2022-11-20-12-36-11 (1).jpg'
+import p2 from '../Image/PHOTO-2022-11-20-12-37-22.jpg'
+import p3 from '../Image/archive/PHOTO-2022-11-20-12-38-28.jpg'
 
 export default function Events() {
   return (
@@ -27,7 +30,7 @@ export default function Events() {
         >
           {/* Image with Float */}
           <img
-            src="/image/archive/PHOTO-2022-11-20-12-38-28.jpg"
+            src={p1}
             alt="Christmas Eve Service"
             className="float-left w-full md:w-1/2 lg:w-1/3 h-auto mr-4 mb-4 rounded-md object-cover"
           />
@@ -78,7 +81,7 @@ export default function Events() {
 >
   {/* Image with Float */}
   <img
-    src="/image/PHOTO-2022-11-20-12-37-22.jpg"
+    src={p2}
     alt="Easter"
     className="float-left w-48 sm:w-64 md:w-72 lg:w-48 h-auto mr-4 mb-4 rounded-md object-cover"
   />
@@ -132,7 +135,7 @@ export default function Events() {
         >
           {/* Image with Float */}
           <img
-            src="/image/archive/PHOTO-2022-11-20-12-38-28.jpg"
+            src={p3}
             alt="Mid Year"
             className="float-left w-full md:w-1/2 lg:w-1/3 h-auto mr-4 mb-4 rounded-md object-cover"
           />
