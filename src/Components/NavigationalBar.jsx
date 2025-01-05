@@ -14,11 +14,11 @@ export default function NavigationalBar() {
     
         <ul className="hidden lg:flex flex-row space-x-20">
           <li class="group hover:-translate-y-2 transition-transform duration-300">
-            <a href="" 
+            <a href="/" 
             className="text-lg font-semibold  hover:text-accent-main">Home</a>
           </li>
           <li class="group hover:-translate-y-2 transition-transform duration-300">
-            <a href=""
+            <a href="/about"
              className="text-lg font-semibold  hover:text-accent-main"
             >About</a>
           </li>

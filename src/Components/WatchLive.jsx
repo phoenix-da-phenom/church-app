@@ -11,7 +11,7 @@ export default function WatchLive() {
             Watch Videos
             </button>
           <button className="p-4 pl-6 bg-transparent hover:bg-accent-main rounded-lg flex items-center gap-1">
-          <img src='./Image/play-button.png' alt='image' className="w-1/2 h-6" />
+          <img src='./Image/play-button.png' alt='image' className="w-1/2 h-6  md:w-10" />
             Watch Live {"(Streaming)"}
             </button>
         </div>
