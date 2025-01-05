@@ -104,6 +104,25 @@ export default function NavigationalBar() {
             >
               Gallery
             </a>
+            <ul class="absolute -left-10 md:left-4 -mt-1 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-10">
+            <li>
+              <a
+                href="#videos"
+                class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600"
+              >
+                Videos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#photos"
+                class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600"
+              >
+                Photos
+              </a>
+            </li>
+          </ul>
+
           </li>
         </ul>
       </div>
