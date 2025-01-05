@@ -43,10 +43,10 @@ export default function NavigationalBar() {
           </li>
         </ul>
 
-        <div id="mobileNav" className={`${currentClass} hidden w-[100%] h-[100%] bg-black text-white fixed top-0 left-0 z-50 place-items-center pt-32`}>
+        <div id="mobileNav" className={`${currentClass}  w-[100%] h-[100%] bg-black text-white fixed top-0 left-0 z-50 place-items-center pt-32`}>
 
         <div id="closeIcon">
-          <img src={CloseIcon} alt="" className="w-10 h-10 absolute right-10 top-10 cursor-pointer" />
+          <img src={CloseIcon} alt="" className="w-10 h-10 absolute right-10 top-10 cursor-pointer" onClick={HideMenu}/>
         </div>
 
         <ul className="flex flex-col gap-4 space-y-4 text-center">
