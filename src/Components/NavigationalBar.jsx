@@ -1,11 +1,12 @@
 import React from "react";
+import Logo from '../Image/logo.png'
 
 export default function NavigationalBar() {
   return (
     <div className="flex flex-row justify-between items-center container pt-3" >
       <div className="flex-row   space-x-20">
         <div className="w-12 h-6 ">
-          <img src="/image/logo.png" alt="" />
+          <img src={Logo} alt="" />
         </div>
 
         <h5 className="w-32 font-bold -mt-4 whitespace-nowrap text-sm md:text-lg"><span className="text-primary-main">Fullness</span> of <span className="text-accent-main font-extrabold md:text-2xl rounded-xl shadow-lg">Grace.Inc</span></h5>
