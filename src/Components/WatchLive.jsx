@@ -7,11 +7,11 @@ export default function WatchLive() {
       <div className=" flex  items-center justify-between "  >
         <div id="buttons" className=" flex mb-4 space-x-1 md:space-x-4 "> 
            <button className="hover:bg-primary-main p-4  bg-accent-main rounded-lg flex items-center gap-2 w-48">
-            <img src='./Image/play-button.png' alt='image' className="w-1/2 h-6 md:w-10" />
+            <img src='./Image/play-button.png' alt='image' className="w-1/2 md:w-7" />
             Watch Videos
             </button>
           <button className="p-4 pl-6 bg-transparent hover:bg-accent-main rounded-lg flex items-center gap-1">
-          <img src='./Image/play-button.png' alt='image' className="w-1/2 h-6  md:w-10" />
+          <img src='./Image/play-button.png' alt='image' className="w--3 h-6  md:w-7" />
             Watch Live {"(Streaming)"}
             </button>
         </div>
