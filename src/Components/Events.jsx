@@ -83,7 +83,7 @@ export default function Events() {
   <img
     src={p2}
     alt="Easter"
-    className="float-left w-48 sm:w-64 md:w-72 lg:w-48 h-auto mr-4 mb-4 rounded-md object-cover"
+    className="float-left w-48 sm:w-64 md:w-72 lg:w-44 h-auto mr-4 mb-4 rounded-md object-cover"
   />
 
   {/* Text */}

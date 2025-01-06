@@ -1,12 +1,22 @@
 import React from "react";
+import FancyLoader from "./FancyLoader";
+import { useStateContext } from "../Context/ContextProvider";
 
 export default function WatchLive() {
+  const {loadVideo, setLoadVideo}= useStateContext()
+  const showVideo= ()=>{
+    setLoadVideo(true)
+    console.log(loadVideo)
+  }
   return (
     <div className="container relative">
+      
+      <FancyLoader/>
+     
       <h2 className="container text-2xl mb-2">Stay in touch online now!</h2>
       <div className=" flex  items-center justify-between ">
         <div id="buttons" className=" flex mb-4 space-x-1 md:space-x-4 ">
-          <button className="hover:bg-primary-main p-4  bg-accent-main rounded-lg flex items-center gap-2 w-48">
+          <button className="hover:bg-primary-main p-4  bg-accent-main rounded-lg flex items-center gap-2 w-48" onClick={showVideo}>
             <img
               src="./Image/play-button.png"
               alt="image"
@@ -14,7 +24,7 @@ export default function WatchLive() {
             />
             Watch Videos
           </button>
-          <button className="p-4 pl-6 bg-transparent hover:bg-accent-main rounded-lg flex items-center gap-1">
+          <button className="p-4 pl-6 bg-transparent hover:bg-accent-main rounded-lg flex items-center gap-1" onClick={showVideo}>
             <img
               src="./Image/play-button.png"
               alt="image"
@@ -48,6 +58,9 @@ export default function WatchLive() {
           />
         </div>
       </div>
+     
+ 
+    
     </div>
   );
 }
