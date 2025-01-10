@@ -6,8 +6,10 @@ const FancyLoader = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      if (loadVideo) {
       setLoadVideo(false);
       alert("No video is available."); // Show the alert box after the spinner completes
+    }
     }, 5000); // Simulate a 5-second load
 
     return () => clearTimeout(timer);
