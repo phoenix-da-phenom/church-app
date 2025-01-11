@@ -14,7 +14,7 @@ export default function StreamNavBar() {
     
   return (
     <div>
-      <nav className="container mt-7 flex justify-between">
+      <nav className="container mt-7 flex justify-between items-center">
         {/* Logo Section */}
         <div id="navIcon">
           <img src="./Image/logo.png" alt="Logo" className="w-16 h-16" />
@@ -35,10 +35,10 @@ export default function StreamNavBar() {
         </div>
 
         {/* Navigation Links Section */}
-        <div id="navLink" className="font-extrabold">
-          <ul className="hidden lg:flex space-x-10">
+        <div id="navLink" className="font-extrabold ">
+          <ul className="hidden lg:flex space-x-10 ">
             <li>
-              <a href="">Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
               <a href="">About</a>
@@ -105,7 +105,7 @@ export default function StreamNavBar() {
               <ul class="absolute left-0 md:left-4 -mt-1 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-10">
                 <li>
                   <a
-                    href="#videos"
+                    href="/stream"
                     class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600"
                   >
                     Videos

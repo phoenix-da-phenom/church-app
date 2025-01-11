@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
+import io from "socket.io-client";
+
+const socket = io("http://localhost:3000");
+
 import StreamNavBar from "../Components/StreamNavBar";
 import VideoComponent from "../Components/VideoComponent";
 import VideoPlaylist from "../Components/VideoPlaylist";
 
-export default function StreamPage() {
-  // useEffect(() => {
-  //   alert("No video at the moment. Try again later");
-  // }, []);
-
+export default function ViewPage() {
+ 
   return (
     <div>
       <StreamNavBar />

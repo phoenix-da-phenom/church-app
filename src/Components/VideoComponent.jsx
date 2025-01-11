@@ -1,15 +1,54 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { FaRegThumbsDown } from "react-icons/fa";
 import { FaShare } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+
+import io from "socket.io-client";
+const socket = io("http://localhost:3000");
 export default function VideoComponent() {
+  const videoRef = useRef(null);
+  const peerRef = useRef(null);
+
+  useEffect(() => {
+    const peer = new RTCPeerConnection();
+
+    peer.ontrack = (event) => {
+      const [remoteStream] = event.streams;
+      videoRef.current.srcObject = remoteStream;
+      videoRef.current.play();
+    };
+
+    peer.onicecandidate = (event) => {
+      if (event.candidate) {
+        socket.emit("signal", { candidate: event.candidate });
+      }
+    };
+
+    socket.on("signal", async (data) => {
+      if (data.description) {
+        await peer.setRemoteDescription(data.description);
+        if (data.description.type === "offer") {
+          const answer = await peer.createAnswer();
+          await peer.setLocalDescription(answer);
+          socket.emit("signal", { description: peer.localDescription });
+        }
+      } else if (data.candidate) {
+        await peer.addIceCandidate(data.candidate);
+      }
+    });
+
+    peerRef.current = peer;
+  }, []);
   return (
     <div id="videoComponentWrapper" className="video-component">
       <div
         id="videoContainer"
         className="bg-black w-100 md:w-[100%] h-[70vh]"
-      ></div>
+      >
+<video ref={videoRef} autoPlay style={{ width: "100%" }} /> 
+
+      </div>
 
       <div id="videoInfo" className="py-4 ">
         <h1 className="font-bold text-lg text-accent-main">
