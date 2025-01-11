@@ -2,6 +2,7 @@ import React from "react";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { FaRegThumbsDown } from "react-icons/fa";
 import { FaShare } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 export default function VideoComponent() {
   return (
     <div id="videoComponentWrapper" className="video-component">
@@ -15,20 +16,24 @@ export default function VideoComponent() {
           Christmas celebration 2014 -12 -25
         </h1>
         <div>
-          <div className="bg-primary-main gap-4 mb-4 p-2 rounded-2xl w-52 text-accent-main flex justify-between items-center float-right">
-            <button className="flex gap-2">
+          <div className="bg-primary-main gap-4 mb-4 p-3 rounded-2xl w-100 text-accent-main flex justify-between items-center float-right">
+          <button className="flex gap-2 items-center hover:bg-foreground-main p-2">
+          <FaEye /> 
+              100
+            </button>
+                        <button className="flex gap-2 items-center hover:bg-foreground-main p-2">
               <FaRegThumbsUp />
               1k
             </button>
 
-            <button className="border-l-gray-100 border-l-2 border-r-2 pl-2 pr-2">
+            <button className="hover:bg-foreground-main p-2 border-l-gray-100 border-l-2 border-r-2 pl-2 pr-2">
               <FaRegThumbsDown />
             </button>
 
 
             <div id ="share">
           
-          <button  className="flex gap-2 items-center">
+          <button  className="flex gap-2 items-center hover:bg-foreground-main p-2">
 
           <FaShare />
           Share
