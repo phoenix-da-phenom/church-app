@@ -34,26 +34,21 @@ body {
 }
 
 
-
-
-
-
-
-
 /* FANCY LOADER style */
+
 .spinner {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
-  }
-  
-  .spinner div {
+}
+
+.spinner div {
     box-sizing: border-box;
     display: block;
     position: absolute;
     top: 50px;
-    left:80%;
+    left: 80%;
     width: 204px;
     height: 204px;
     margin: 8px;
@@ -61,26 +56,50 @@ body {
     border-radius: 50%;
     animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #2778e2 transparent transparent transparent;
-  }
-  
-  .spinner div:nth-child(1) {
+}
+
+.spinner div:nth-child(1) {
     animation-delay: -0.45s;
-  }
-  .spinner div:nth-child(2) {
+}
+
+.spinner div:nth-child(2) {
     animation-delay: -0.3s;
-  }
-  .spinner div:nth-child(3) {
+}
+
+.spinner div:nth-child(3) {
     animation-delay: -0.15s;
-  }
-  
-  @keyframes spinner {
+}
+
+@keyframes spinner {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
+}
 
-/* END OF FANCY LOADER style */ 
+
+/* END OF FANCY LOADER style */
+
+#videoComponentWrapper {
+    display: block;
+}
+
+#videoComponentWrapper #videoDescription {
+    max-height: 400px;
+    /* Limit growth */
+    overflow: auto;
+    /* Scroll if content exceeds */
+}
+
+#videoPlaylist ul {
+    width: 100%;
+    /* Ensure it occupies full width */
+}
+
+#videoPlaylist li {
+    max-height: 120px;
+    /* Prevent excessive growth */
+    overflow: hidden;
+}

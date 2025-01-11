@@ -4,21 +4,26 @@ import VideoComponent from "../Components/VideoComponent";
 import VideoPlaylist from "../Components/VideoPlaylist";
 
 export default function StreamPage() {
+  // useEffect(() => {
+  //   alert("No video at the moment. Try again later");
+  // }, []);
 
- 
-  useEffect(()=>{
- //alert user there no video at the momet
- alert("No video at the momemnt <br/> Try agin later")
-  },[])
   return (
     <div>
       <StreamNavBar />
-      <div id="parent" className="container flex justify-between pt-5">
-        <div id="leftSide" className="w-50" style={{ border: '4px solid purple' }}>
+      <div
+        id="parent"
+        className="container flex  lg:flex-row flex-col gap-8 pt-5 items-start" // Ensure alignment
+       
+      >
+        <div id="leftSide" className="w-100 rounded-lg md:w-1/2"> {/* Fix width */}
           <VideoComponent />
         </div>
 
-        <div id="rightSide" className="p-8 w-50" style={{ border:'4px solid green' }} >
+        <div
+          id="rightSide"
+          className="p-8 w-40 rounded-lg border shadow-2xl bg-transparent w-[100%] md:w-[50%]"
+        >
           <VideoPlaylist />
         </div>
       </div>
