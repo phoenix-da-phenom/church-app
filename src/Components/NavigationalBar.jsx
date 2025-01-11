@@ -111,7 +111,7 @@ export default function NavigationalBar() {
                 href="#videos"
                 class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600"
               >
-               <Link to="/stream">Videos</Link>
+               <a href="/stream">Videos</a>
               </a>
             </li>
             <li>

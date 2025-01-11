@@ -16,8 +16,8 @@ export default function VideoComponent() {
           Christmas celebration 2014 -12 -25
         </h1>
         <div>
-          <div className="bg-primary-main gap-4 mb-4 p-3 rounded-2xl w-100 text-accent-main flex justify-between items-center float-right">
-          <button className="flex gap-2 items-center hover:bg-foreground-main p-2">
+          <div className="bg-primary-main gap-4 mb-4 p-1 rounded-2xl w-100 text-accent-main flex justify-between items-center float-right shadow-lg border border-gray-200">
+          <button className="flex gap-2 items-center hover:bg-foreground-main p-2 rounded-lg">
           <FaEye /> 
               100
             </button>
@@ -33,7 +33,7 @@ export default function VideoComponent() {
 
             <div id ="share">
           
-          <button  className="flex gap-2 items-center hover:bg-foreground-main p-2">
+          <button  className="flex gap-2 items-center hover:bg-foreground-main p-2 rounded-lg">
 
           <FaShare />
           Share
