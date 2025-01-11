@@ -10,12 +10,12 @@ export default function VideoComponent() {
         className="bg-black w-100 md:w-[100%] h-[70vh]"
       ></div>
 
-      <div id="videoInfo" className="py-4">
+      <div id="videoInfo" className="py-4 ">
         <h1 className="font-bold text-lg text-accent-main">
           Christmas celebration 2014 -12 -25
         </h1>
         <div>
-          <div className="bg-primary-main gap-4 p-2 rounded-2xl w-52 text-accent-main flex justify-between items-center float-right">
+          <div className="bg-primary-main gap-4 mb-4 p-2 rounded-2xl w-52 text-accent-main flex justify-between items-center float-right">
             <button className="flex gap-2">
               <FaRegThumbsUp />
               1k
