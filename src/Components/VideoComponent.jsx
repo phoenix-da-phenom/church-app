@@ -1,21 +1,48 @@
 import React from "react";
-
+import { FaRegThumbsUp } from "react-icons/fa";
+import { FaRegThumbsDown } from "react-icons/fa";
+import { FaShare } from "react-icons/fa";
 export default function VideoComponent() {
   return (
     <div id="videoComponentWrapper" className="video-component">
       <div
         id="videoContainer"
         className="bg-black w-100 md:w-[100%] h-[70vh]"
-        
       ></div>
 
       <div id="videoInfo" className="py-4">
         <h1 className="font-bold text-lg text-accent-main">
           Christmas celebration 2014 -12 -25
         </h1>
+        <div>
+          <div className="bg-primary-main gap-4 p-2 rounded-2xl w-52 text-accent-main flex justify-between items-center float-right">
+            <button className="flex gap-2">
+              <FaRegThumbsUp />
+              1k
+            </button>
+
+            <button className="border-l-gray-100 border-l-2 border-r-2 pl-2 pr-2">
+              <FaRegThumbsDown />
+            </button>
+
+
+            <div id ="share">
+          
+          <button  className="flex gap-2 items-center">
+
+          <FaShare />
+          Share
+          </button>
+        
+
+          </div>
+          </div>
+
+         
+        </div>
       </div>
 
-      <div id="videoDescription" className="w-[100%]" >
+      <div id="videoDescription" className="w-[100%]">
         <p className="text-justify pb-4">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
           quibusdam corporis obcaecati quod quisquam magnam corrupti illum dicta
@@ -30,3 +57,4 @@ export default function VideoComponent() {
     </div>
   );
 }
+
