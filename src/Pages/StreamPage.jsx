@@ -13,16 +13,16 @@ export default function StreamPage() {
       <StreamNavBar />
       <div
         id="parent"
-        className="container flex  lg:flex-row flex-col gap-8 pt-5 items-start" // Ensure alignment
+        className="container flex  lg:flex-row lg:gap-10  flex-col gap-8 pt-5 items-start   " // Ensure alignment
        
       >
-        <div id="leftSide" className="w-100 rounded-lg md:w-1/2"> {/* Fix width */}
+        <div id="leftSide" className="w-100 rounded-lg md:w-100 lg:w-1/2"> {/* Fix width */}
           <VideoComponent />
         </div>
 
         <div
           id="rightSide"
-          className="p-8 w-40 rounded-lg border shadow-2xl bg-transparent w-[100%] md:w-[50%]"
+          className="p-8 w-[100%] md:w-[100%] lg:w-[40%] rounded-lg border shadow-2xl bg-transparent"
         >
           <VideoPlaylist />
         </div>

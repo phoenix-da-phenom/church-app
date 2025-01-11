@@ -5,7 +5,7 @@ export default function VideoComponent() {
     <div id="videoComponentWrapper" className="video-component">
       <div
         id="videoContainer"
-        className="bg-black w-100 h-[70vh]"
+        className="bg-black w-100 md:w-[100%] h-[70vh]"
         
       ></div>
 
@@ -15,7 +15,7 @@ export default function VideoComponent() {
         </h1>
       </div>
 
-      <div id="videoDescription" className="flex flex-col gap-4">
+      <div id="videoDescription" className="w-[100%]" >
         <p className="text-justify pb-4">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
           quibusdam corporis obcaecati quod quisquam magnam corrupti illum dicta
