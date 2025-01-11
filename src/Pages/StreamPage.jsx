@@ -14,11 +14,11 @@ export default function StreamPage() {
     <div>
       <StreamNavBar />
       <div id="parent" className="container flex justify-between pt-5">
-        <div id="leftSide" className="w-50">
+        <div id="leftSide" className="w-50" style={{ border: '4px solid purple' }}>
           <VideoComponent />
         </div>
 
-        <div id="rightSide" className="p-8 w-50" >
+        <div id="rightSide" className="p-8 w-50" style={{ border:'4px solid green' }} >
           <VideoPlaylist />
         </div>
       </div>
