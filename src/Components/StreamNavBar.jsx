@@ -25,7 +25,7 @@ export default function StreamNavBar() {
           <input
             type="text"
             placeholder="Search"
-            className="w-full h-10 rounded-full p-3 pr-12" // Add `pr-12` for padding-right
+            className="flex flex-col items-center font-bold text-accent-main w-full h-10 rounded-full p-3 pr-12" // Add `pr-12` for padding-right
           />
           <img
             src={searchIcon}
