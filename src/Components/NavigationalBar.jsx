@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Image/logo.png";
 import BurgerIcon from "../Image/menu.png";
 import CloseIcon from "../Image/close.png";
+import { Link } from "react-router-dom";
 
 export default function NavigationalBar() {
   const [currentClass, setCurrentClass] = React.useState("hidden");
@@ -110,7 +111,7 @@ export default function NavigationalBar() {
                 href="#videos"
                 class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600"
               >
-                Videos
+               <Link to="/stream">Videos</Link>
               </a>
             </li>
             <li>
