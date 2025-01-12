@@ -9,17 +9,28 @@ const Streamer = () => {
   const [stream, setStream] = useState(null);
 
   useEffect(() => {
+    let localStream;
+    
     async function startStreaming() {
       try {
-        const localStream = await navigator.mediaDevices.getUserMedia({
+        // Access the user's camera and microphone
+        localStream = await navigator.mediaDevices.getUserMedia({
           video: true,
           audio: true,
         });
         setStream(localStream);
 
-        // Display stream locally
-        videoRef.current.srcObject = localStream;
-        videoRef.current.play();
+        // Display the stream locally
+        if (videoRef.current) {
+          videoRef.current.srcObject = localStream;
+
+          // Wait for the video element to be ready before calling play
+          videoRef.current.onloadedmetadata = () => {
+            videoRef.current.play().catch((error) => {
+              console.error("Error playing video:", error);
+            });
+          };
+        }
 
         // Set up WebRTC peer connection
         const peer = new RTCPeerConnection();
@@ -53,10 +64,16 @@ const Streamer = () => {
       }
     });
 
-    // Emit the local stream to the server
-    socket.emit("streaming", { stream: stream });
-
-  }, [stream]);
+    // Clean up on component unmount
+    return () => {
+      if (localStream) {
+        localStream.getTracks().forEach((track) => track.stop());
+      }
+      if (peerRef.current) {
+        peerRef.current.close();
+      }
+    };
+  }, []);
 
   return (
     <div>
