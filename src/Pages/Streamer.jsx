@@ -52,7 +52,11 @@ const Streamer = () => {
         await peerRef.current.addIceCandidate(data.candidate);
       }
     });
-  }, []);
+
+    // Emit the local stream to the server
+    socket.emit("streaming", { stream: stream });
+
+  }, [stream]);
 
   return (
     <div>
