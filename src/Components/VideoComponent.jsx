@@ -45,7 +45,7 @@ export default function VideoComponent() {
         id="videoContainer"
         className="bg-black w-100 md:w-[100%] h-[70vh]"
       >
-        <video ref={videoRef} autoPlay style={{ width: "100%" }} />
+        <video ref={videoRef} autoPlay style={{ width: "100%" }} muted />
       </div>
     </div>
   );
