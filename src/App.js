@@ -10,7 +10,7 @@ import Contact from "./Pages/Contact";
 
 
 const App = () => {
-  const [isStreamer, setIsStreamer] = useState(true);
+  const [isStreamer, setIsStreamer] = useState(false);
   return (
 <div>
       <button onClick={() => setIsStreamer(!isStreamer)}>

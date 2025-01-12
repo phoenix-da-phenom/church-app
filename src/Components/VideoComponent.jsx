@@ -5,7 +5,7 @@ import { FaShare } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
 import io from "socket.io-client";
-const socket = io("http://localhost:3000");
+const socket = io("https://church-backend-58s3.onrender.com");
 export default function VideoComponent() {
   const videoRef = useRef(null);
   const peerRef = useRef(null);
@@ -46,7 +46,7 @@ export default function VideoComponent() {
         id="videoContainer"
         className="bg-black w-100 md:w-[100%] h-[70vh]"
       >
-<video ref={videoRef} autoPlay style={{ width: "100%" }} /> 
+          <video ref={videoRef} autoPlay style={{ width: "100%" }} /> 
 
       </div>
 

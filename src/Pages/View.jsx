@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from "react";
-import io from "socket.io-client";
+
 
 
 
 import StreamNavBar from "../Components/StreamNavBar";
 import VideoComponent from "../Components/VideoComponent";
 import VideoPlaylist from "../Components/VideoPlaylist";
-const socket = io("http://localhost:3000");
+
 export default function View() {
   return (
     <div>
