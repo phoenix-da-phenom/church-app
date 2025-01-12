@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:3000"); // Connect to the signaling server
+const socket = io("https://church-backend-58s3.onrender.com"); // Connect to the signaling server
 
 const Streamer = () => {
   const videoRef = useRef(null);
