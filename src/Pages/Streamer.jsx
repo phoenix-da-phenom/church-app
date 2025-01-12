@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("https://church-backend-58s3.onrender.com"); // Signaling server
-
+const socket = io("https://church-backend-58s3.onrender.com", {
+  transports: ["websocket"], // Use WebSocket transport only
+});
 const Streamer = () => {
   const videoRef = useRef(null);
   const peerRef = useRef(null);
