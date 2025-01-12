@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 
-import ViewPage from "./Pages/ViewPage";
 import Streamer from "./Pages/Streamer";
+import View from "./Pages/View";
 
 
 
@@ -12,7 +12,7 @@ const App = () => {
       <button onClick={() => setIsStreamer(!isStreamer)}>
         Switch to {isStreamer ? "Viewer" : "Streamer"}
       </button>
-      {isStreamer ? <Streamer /> : <ViewPage />}
+      {isStreamer ? <Streamer /> : <View />}
     </div>
     
 

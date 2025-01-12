@@ -1,14 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:3000");
+
 
 import StreamNavBar from "../Components/StreamNavBar";
 import VideoComponent from "../Components/VideoComponent";
 import VideoPlaylist from "../Components/VideoPlaylist";
-
-export default function ViewPage() {
- 
+const socket = io("http://localhost:3000");
+export default function View() {
   return (
     <div>
       <StreamNavBar />
@@ -29,5 +28,11 @@ export default function ViewPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+
+
+
+
+
+
