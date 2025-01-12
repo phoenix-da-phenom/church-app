@@ -39,13 +39,24 @@ export default function VideoComponent() {
     peerRef.current = peer;
   }, []);
 
+  function playVideo() {
+    const videoElement = document.getElementById("videoElement"); // Adjust ID accordingly
+    if (videoElement) {
+        videoElement.play().catch((err) => {
+            console.error("Failed to play video:", err.message);
+        });
+    }
+}
+
   return (
     <div id="videoComponentWrapper" className="video-component">
       <div
         id="videoContainer"
         className="bg-black w-100 md:w-[100%] h-[70vh]"
       >
-        <video ref={videoRef} autoPlay style={{ width: "100%" }} muted />
+        <video ref={videoRef} autoPlay style={{ width: "100%" }} muted  controls/>
+        {/* Add a user interaction trigger */}
+<button onClick={playVideo}>Start Stream</button>;
       </div>
     </div>
   );
