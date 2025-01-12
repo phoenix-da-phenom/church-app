@@ -39,6 +39,8 @@ export default function VideoComponent() {
     });
 
     peerRef.current = peer;
+    console.log(peer);
+    
   }, []);
   return (
     <div id="videoComponentWrapper" className="video-component">

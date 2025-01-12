@@ -10,7 +10,7 @@ import Contact from "./Pages/Contact";
 
 
 const App = () => {
-  const [isStreamer, setIsStreamer] = useState(false);
+
   return (
 
 
