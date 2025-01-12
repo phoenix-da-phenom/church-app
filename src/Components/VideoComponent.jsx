@@ -56,7 +56,7 @@ export default function VideoComponent() {
       >
         <video ref={videoRef} autoPlay style={{ width: "100%" }} muted  controls/>
         {/* Add a user interaction trigger */}
-<button onClick={playVideo}>Start Stream</button>;
+<button onClick={playVideo} className="bg-green-500 p-3">Start Stream</button>
       </div>
     </div>
   );
