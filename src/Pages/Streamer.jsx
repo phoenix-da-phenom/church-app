@@ -1,30 +1,24 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("https://church-backend-58s3.onrender.com"); // Connect to the signaling server
+const socket = io("https://church-backend-58s3.onrender.com"); // Signaling server
 
 const Streamer = () => {
   const videoRef = useRef(null);
   const peerRef = useRef(null);
-  const [stream, setStream] = useState(null);
 
   useEffect(() => {
     let localStream;
-    
+
     async function startStreaming() {
       try {
-        // Access the user's camera and microphone
         localStream = await navigator.mediaDevices.getUserMedia({
           video: true,
           audio: true,
         });
-        setStream(localStream);
 
-        // Display the stream locally
         if (videoRef.current) {
           videoRef.current.srcObject = localStream;
-
-          // Wait for the video element to be ready before calling play
           videoRef.current.onloadedmetadata = () => {
             videoRef.current.play().catch((error) => {
               console.error("Error playing video:", error);
@@ -32,19 +26,21 @@ const Streamer = () => {
           };
         }
 
-        // Set up WebRTC peer connection
         const peer = new RTCPeerConnection();
         localStream.getTracks().forEach((track) => peer.addTrack(track, localStream));
 
         peer.onicecandidate = (event) => {
           if (event.candidate) {
+            console.log("Sending ICE candidate:", event.candidate);
             socket.emit("signal", { candidate: event.candidate });
           }
         };
 
         peer.onnegotiationneeded = async () => {
+          console.log("Negotiation needed");
           const offer = await peer.createOffer();
           await peer.setLocalDescription(offer);
+          console.log("Sending offer:", peer.localDescription);
           socket.emit("signal", { description: peer.localDescription });
         };
 
@@ -57,14 +53,16 @@ const Streamer = () => {
     startStreaming();
 
     socket.on("signal", async (data) => {
+      console.log("Received signal:", data);
       if (data.description) {
         await peerRef.current.setRemoteDescription(data.description);
+        console.log("Set remote description");
       } else if (data.candidate) {
         await peerRef.current.addIceCandidate(data.candidate);
+        console.log("Added ICE candidate");
       }
     });
 
-    // Clean up on component unmount
     return () => {
       if (localStream) {
         localStream.getTracks().forEach((track) => track.stop());
@@ -78,7 +76,16 @@ const Streamer = () => {
   return (
     <div>
       <h1>Streamer</h1>
-      <video ref={videoRef} autoPlay muted style={{ width: "100%" }} />
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        style={{
+          width: "100%",
+          height: "auto",
+          border: "1px solid black",
+        }}
+      />
     </div>
   );
 };
