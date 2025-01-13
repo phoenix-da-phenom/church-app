@@ -6,13 +6,13 @@ export default function HeroFeature1() {
         alert("No previous messaages available")
     }
   return (
-    <div className="h-[80vh] relative inline">
-        <div id="prevIcon" className="absolute top-1/2 left-[100px] border rounded-full p-1 text-sm cursor-pointer hover:bg-accent-main" onClick={handlePrev}>
+    <div className="h-[80vh] relative inline p-5">
+        <div id="prevIcon" className="hidden lg:absolute top-1/2 left-[100px] border rounded-full p-1 text-sm cursor-pointer hover:bg-accent-main" onClick={handlePrev}>
         <GrPrevious />
 
         </div>
-      <div className="mx-auto  container flex flex-col lg:flex-row justify-between items-center">
-        <div className="flex flex-col gap-5 w-[50%]">
+      <div className="container flex flex-col lg:flex-row justify-between items-center">
+        <div className="flex flex-col gap-5 lg:w-[50%]">
           <h1 className=" text-outline font-bold text-blue-500 text-nowrap text-[50px] lg:text-8xl" >Day 8</h1>
          <h1 className="text-accent-main text-sm font-bold">Time : 4:00 - 6:30PM</h1>
           <h1 id="topicOfTheDay" className="font-bold text-xl">How to get quick access to God's presence?</h1>
@@ -27,7 +27,7 @@ export default function HeroFeature1() {
             Molestiae!
           </p>
         </div>
-        <div className="w-5/12 h-56">
+        <div className="lg:w-5/12 h-56 lg:mb-24">
           <img src={BlueFloor} alt="" className="w-100 h-100 rounded-lg" />
         </div>
       </div>

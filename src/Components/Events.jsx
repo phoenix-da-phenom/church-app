@@ -1,5 +1,5 @@
 import React from "react";
-import p1 from '../Image/PHOTO-2022-11-20-12-36-11 (1).jpg'
+import p1 from '../Image/next_up1.jpg'
 import p2 from '../Image/PHOTO-2022-11-20-12-37-22.jpg'
 import p3 from '../Image/archive/PHOTO-2022-11-20-12-38-28.jpg'
 
@@ -10,29 +10,29 @@ export default function Events() {
         Upcoming Events
       </h1>
 
-      <div>
+      <div className=" p-5">
         {/* Header Section */}
-        <div className="space-y-5">
+        <div className="space-y-5 ">
           <div className="bg-primary-main rounded-2xl p-2">
             <h1 className="text-center font-extrabold shadow-inner">
-              1st January 2025
+              1st 8th 15th 22nd 29 January 2025
             </h1>
           </div>
           <h4 className="text-center font-extrabold text-gray-500">
-            <span className="text-red-600">Christmas</span> Eve Service
+            <span className="text-red-600">JANUARY</span> Must Obey
           </h4>
         </div>
 
         {/* Description Section */}
         <div
           id="description"
-          className="p-4 border border-gray-200 rounded-md shadow-md mt-4 mb-8"
+          className="p-4  rounded-md shadow-md mt-4 mb-8"
         >
           {/* Image with Float */}
           <img
             src={p1}
             alt="Christmas Eve Service"
-            className="float-left w-full md:w-1/2 lg:w-1/3 h-auto mr-4 mb-4 rounded-md object-cover"
+            className="float-left w-full md:w-1/2 lg:w-1/6 h-auto mr-4 mb-4 rounded-md object-cover"
           />
 
           {/* Text */}
@@ -63,7 +63,7 @@ export default function Events() {
 
 
 
-      <div>
+      <div className="p-5">
         {/* Header Section */}
         <div className="space-y-5">
   <div className="bg-primary-main rounded-2xl p-2">
@@ -77,7 +77,7 @@ export default function Events() {
 {/* Description Section */}
 <div
   id="description"
-  className="p-4 border border-gray-200 rounded-md shadow-md mt-4 mb-8"
+  className="p-4 rounded-md shadow-md mt-4 mb-8"
 >
   {/* Image with Float */}
   <img
