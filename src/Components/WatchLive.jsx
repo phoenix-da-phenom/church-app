@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FancyLoader from "./FancyLoader";
 import { useStateContext } from "../Context/ContextProvider";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function WatchLive() {
   const {loadVideo, setLoadVideo}= useStateContext()
   const showVideo= ()=>{
     setLoadVideo(true)
     console.log(loadVideo)
   }
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in ms
+          easing: 'ease-in-out', // Easing function
+          once: true, // Whether animation should happen only once
+        });
+      }, []);
   return (
     <div className="container relative">
       
       <FancyLoader/>
      
       <h2 className="container text-2xl mb-2">Stay in touch online now!</h2>
-      <div className=" flex  items-center justify-between ">
+      <div data-aos="fade-right" className=" flex  items-center justify-between ">
         <div id="buttons" className=" flex mb-4 space-x-1 md:space-x-4 ">
           <button className="hover:bg-primary-main p-4  bg-accent-main rounded-lg flex items-center gap-2 w-48" onClick={showVideo}>
             <img

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../Image/logo.png";
 import BurgerIcon from "../Image/menu.png";
 import CloseIcon from "../Image/close.png";
-import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function NavigationalBar() {
   const [currentClass, setCurrentClass] = React.useState("hidden");
@@ -14,6 +15,14 @@ export default function NavigationalBar() {
     setCurrentClass("hidden");
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      easing: 'ease-in-out', // Easing function
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div className="flex flex-row justify-between items-center container pt-3 pr-16">
       <div className="flex-row   space-x-20">
@@ -21,7 +30,7 @@ export default function NavigationalBar() {
           <img src={Logo} alt="" />
         </div>
 
-        <h5 className="w-32 font-bold -mt-4 whitespace-nowrap text-sm md:text-lg">
+        <h5 data-aos="fade-in" className="w-32 font-bold -mt-4 whitespace-nowrap text-sm md:text-lg">
           <span className="text-primary-main">Fullness</span> of{" "}
           <span className="text-accent-main font-extrabold md:text-2xl rounded-xl shadow-lg">
             Grace.Inc
@@ -29,7 +38,7 @@ export default function NavigationalBar() {
         </h5>
       </div>
 
-      <ul className="hidden lg:flex flex-row space-x-20">
+      <ul data-aos="fade-up"  className="hidden lg:flex flex-row space-x-20">
         <li className="group hover:-translate-y-2 transition-transform duration-300">
           <a href="/" className="text-lg font-semibold  hover:text-accent-main">
             Home
@@ -81,7 +90,7 @@ export default function NavigationalBar() {
           />
         </div>
 
-        <ul className="flex flex-col gap-4 space-y-4 text-center">
+        <ul data-aos="fade-up"  className="flex flex-col gap-4 space-y-4 text-center">
           <li className="group hover:-translate-y-2 transition-transform duration-300">
             <a
               href="/"

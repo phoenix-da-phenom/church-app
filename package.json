@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.2.1",
+    "aos": "^2.3.4",
     "cra-template": "1.2.0",
     "css-loader": "^7.1.2",
     "postcss-loader": "^8.1.1",
