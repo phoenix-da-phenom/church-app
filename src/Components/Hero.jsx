@@ -1,6 +1,7 @@
 import React from "react";
 import HeroText from "./HeroText";
 import NavigationalBar from "./NavigationalBar";
+import HeroFeature1 from "./HeroFeature1";
 
 export default function Hero() {
   return (
@@ -9,6 +10,10 @@ export default function Hero() {
     </div>
     <NavigationalBar />
     <HeroText />
+    <HeroFeature1/>
+
+
+
     </div>
    
     

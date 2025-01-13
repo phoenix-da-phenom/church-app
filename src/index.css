@@ -33,6 +33,11 @@ body {
     @apply bg-background-main border-2 rounded-lg w-[100%] my-10;
 }
 
+.text-outline {
+    -webkit-text-stroke: 2px #3d3f94;
+    color: transparent;
+}
+
 
 /* FANCY LOADER style */
 
