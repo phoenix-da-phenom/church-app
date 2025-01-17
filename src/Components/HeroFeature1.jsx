@@ -23,7 +23,7 @@ export default function HeroFeature1() {
         </div>
       <div data-aos="fade-left" className="container flex flex-col lg:flex-row justify-between items-center">
         <div className="flex flex-col gap-5 lg:w-[50%]">
-          <h1 className=" text-outline font-bold text-blue-500 text-nowrap text-[50px] lg:text-8xl" >Day 8</h1>
+          <h1 className=" text-outline font-bold text-blue-500 text-nowrap text-[50px] lg:text-8xl" >Day 12</h1>
          <h1 className="text-accent-main text-sm font-bold">Time : 4:00 - 6:30PM</h1>
           <h1 id="topicOfTheDay" className="font-bold text-xl">How to get quick access to God's presence?</h1>
           <p className="text-justify">
