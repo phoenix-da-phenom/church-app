@@ -3,6 +3,7 @@ import FancyLoader from "./FancyLoader";
 import { useStateContext } from "../Context/ContextProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link, redirect } from "react-router-dom";
 export default function WatchLive() {
   const {loadVideo, setLoadVideo}= useStateContext()
   const showVideo= ()=>{
@@ -33,7 +34,8 @@ export default function WatchLive() {
             />
             Watch Videos
           </button>
-          <button className="p-4 pl-6 bg-transparent hover:bg-accent-main rounded-lg flex items-center gap-1" onClick={showVideo}>
+          <Link to="/view">
+          <button className="p-4 pl-6 bg-transparent hover:bg-accent-main rounded-lg flex items-center gap-1" >
             <img
               src="./Image/play-button.png"
               alt="image"
@@ -41,6 +43,9 @@ export default function WatchLive() {
             />
             Watch Live {"(Streaming)"}
           </button>
+          
+          </Link>
+         
         </div>
         
 
